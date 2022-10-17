@@ -70,11 +70,17 @@ To get a local copy up and running follow these simple example steps. (NPM)
 
 ## Authors
 
-👤 *Author1*
+👤 *Didier Ganthier*
 
 - GitHub: [@didierganthier](https://github.com/didierganthier)
 - Twitter: [@didierganthier_](https://twitter.com/didierganthier_)
 - LinkedIn: [didierganthier](https://linkedin.com/in/didierganthier)
+
+👤 **Koami NOGBEDJI**
+
+- GitHub: [@hopeforkoami](https://github.com/hopeforkoami)
+- Twitter: [@KNogbedji](https://twitter.com/KNogbedji)
+- LinkedIn: [koami-nogbedji-a155b7233](https://linkedin.com/in/koami-nogbedji-a155b7233)
 
 ## 🤝 Contributing
 
