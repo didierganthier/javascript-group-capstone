@@ -24,4 +24,4 @@ yarn.lock
 
 # build
 build
-.dist
+dist
