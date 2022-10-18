@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple example steps. (NPM)
 5. Run `npm install` to get the dependencies
 
    not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
-6. Compile Tailwind with `npm tailwind`   
+6. Compile Tailwind with `npm run tailwind`   
 7. Run webpack:
 - Production:
    ``` 
