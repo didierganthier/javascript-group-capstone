@@ -7,7 +7,7 @@
     "test": "jest --env=jsdom",
     "build": "webpack",
     "watch": "jest --watch",
-    "tailwind": "npx tailwindcss -i ./src/style.css -o ./dist/output.css",
+    "tailwind": "npx tailwindcss -i ./src/style.css -o ./dist/output.css --watch",
     "start": "webpack serve --open"
   },
   "repository": {
