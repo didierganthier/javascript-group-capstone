@@ -62,8 +62,7 @@
 .event_list {
   position: absolute;
 }
+
 .hidden_item {
   display: none !important;
 }
-
-
