@@ -1,3 +1,5 @@
+import getLikes from "./getLikes";
+
 // Create the HTML for the event
 const createEventHtml = (event) => {
   const {
@@ -43,6 +45,7 @@ const createEventHtml = (event) => {
   </div>
   
       `;
+  getLikes();
   return eventHtml;
 };
 
