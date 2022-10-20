@@ -1,4 +1,4 @@
-import getLikes from "./getLikes";
+import getLikes from './getLikes.js';
 
 // Create the HTML for the event
 const createEventHtml = (event) => {

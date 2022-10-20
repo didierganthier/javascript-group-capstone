@@ -2,11 +2,9 @@ const getLikes = async () => {
   const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AvZcLNYpo6DEiCsZuxdL/likes/');
   if (response.headers.get('content-type').includes('application/json')) {
     const data = await response.json();
-    console.log(data);
     data.forEach((like) => {
       // Check if element exists before adding like
       const element = document.getElementById(`liked-by-${like.item_id.replace('like-', '')}`);
-      console.log(`liked-by-${like.item_id.replace('like-', '')}`);
       if (element) {
         element.innerHTML = `Liked by ${like.likes} people`;
       } else {
