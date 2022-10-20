@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.elements_container {
+  position: absolute;
+}
+
+.modal_popup {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  overflow-y: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  opacity: 1;
+  width: 100vw;
+}
+
+.modal_container {
+  display: flex;
+  flex-direction: column;
+  background: #4199CF;
+  border-radius: 16px;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.modal_close_button {
+  background: #ebecf0;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-bottom: 1em;
+  color: #67798e;
+  border-radius: 8px;
+}
+
+.modal_image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.modal_title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: white;
+}
+.event_detail {
+  font-weight: bolder;
+}
+
+.eventList {
+  position: absolute;
+}
+
+
