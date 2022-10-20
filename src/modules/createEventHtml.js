@@ -1,4 +1,5 @@
 import getLikes from './getLikes.js';
+
 const createEventHtml = (event) => {
   const {
     title, type, venue, id,
