@@ -17,7 +17,7 @@ const createEventHtml = (event) => {
   event.performers[0].image
     ? `
       <div class="">
-        <img class="w-full my-8" src="${event.performers[0].image}" alt="${event.performers[0].name}" class="event__image">
+        <img class="w-full my-8" src="${event.performers[0].image}" alt="${event.performers[0].name}" onclick="popEventUp(${event.id})" class="event__image">
       </div>
       `
     : `

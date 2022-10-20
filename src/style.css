@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.elements_container {
-  position: absolute;
-}
-
 .modal_popup {
   z-index: 10;
   display: flex;
@@ -22,7 +18,7 @@
 .modal_container {
   display: flex;
   flex-direction: column;
-  background: #4199CF;
+  background: #4199cf;
   border-radius: 16px;
   padding-left: 2%;
   padding-right: 2%;
@@ -58,12 +54,16 @@
   line-height: 44px;
   color: white;
 }
+
 .event_detail {
   font-weight: bolder;
 }
 
-.eventList {
+.event_list {
   position: absolute;
+}
+.hidden_item {
+  display: none !important;
 }
 
 
