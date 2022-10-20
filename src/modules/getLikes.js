@@ -7,8 +7,6 @@ const getLikes = async () => {
       const element = document.getElementById(`liked-by-${like.item_id.replace('like-', '')}`);
       if (element) {
         element.innerHTML = `Liked by ${like.likes} people`;
-      } else {
-        console.log('Element does not exist');
       }
     });
     return data;

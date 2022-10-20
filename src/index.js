@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import '../dist/output.css';
-import addLike from './modules/addLike';
+import addLike from './modules/addLike.js';
 import init from './modules/init.js';
 
 // Initialize the app
