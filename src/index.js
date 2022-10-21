@@ -2,7 +2,8 @@
 import '../dist/output.css';
 import addComment from './modules/addComment.js';
 import addLike from './modules/addLike.js';
-import getComments from './modules/getComments.js';
+import countItems from './modules/countItems';
+import getComments from './modules/getComments';
 import init from './modules/init.js';
 // Initialize the app
 init();
@@ -16,6 +17,7 @@ document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
       };
     }
   });
+  countItems();
 });
 const getDomCommentsCount = () => document.querySelector('.comments').getElementsByTagName('div').length;
 document.querySelector('body').addEventListener('DOMSubtreeModified', () => {
