@@ -2,8 +2,8 @@
 import '../dist/output.css';
 import addComment from './modules/addComment.js';
 import addLike from './modules/addLike.js';
-import countItems from './modules/countItems';
-import getComments from './modules/getComments';
+import countItems from './modules/countItems.js';
+import getComments from './modules/getComments.js';
 import init from './modules/init.js';
 // Initialize the app
 init();
