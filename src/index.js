@@ -16,34 +16,23 @@ document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
     }
   });
 });
-
-const addNewComment = async (id) => {
-  await addComment(id, document.querySelector('.username').value, document.querySelector('.usercomment').value);
-};
-document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
+document.querySelector('body').addEventListener('DOMSubtreeModified', () => {
   document.querySelectorAll('.image').forEach((image) => {
     image.onclick = () => {
       document.querySelector('#popup').classList.remove('hidden');
-      // Center the popup
-      document.querySelector('#popup').style.top = `${window.scrollY + (window.innerHeight / 2) - (document.querySelector('#popup').offsetHeight / 2)}px`;
-      document.querySelector('#popup').style.left = `${window.scrollX + (window.innerWidth / 2) - (document.querySelector('#popup').offsetWidth / 2)}px`;
+      const elementId = image.parentElement.parentElement.children[0].children[0].src.replace('https://avatars.dicebear.com/api/adventurer/', 'like-').replace('.svg', '');
+      document.querySelector('#popup-item-id').innerHTML = elementId;
+      document.querySelector('#popup-item-id').classList.add('text-white', 'mb-4', 'text-2xl');
       // Get the child of the popup div
       const popupChild = document.querySelector('#popup').children[0].children[0];
       popupChild.classList.add('w-full');
       popupChild.src = image.src;
       document.querySelector('.text-title').innerHTML = image.alt;
-      // listing all the comments based on the customedid
-      document.querySelector('.comment_button').addEventListener('click', () => {
-        addNewComment(image.name);
-      });
       // Make the rest of the page unscrollable
       document.querySelector('body').classList.add('overflow-hidden');
       // Blur the elements of the body
       document.querySelectorAll('#event').forEach((event) => {
         event.classList.add('blur');
-      });
-      document.querySelector('.comment_button').addEventListener('click', () => {
-
       });
       document.querySelector('#close').addEventListener('click', () => {
         document.querySelector('#popup').classList.add('hidden');
@@ -52,8 +41,16 @@ document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
           event.classList.remove('blur');
         });
       });
+
+      document.querySelector('button[type="submit"]').addEventListener('click', () => {
+        const username = document.querySelector('#username').value;
+        const comment = document.querySelector('#comment').value;
+        const item_id = document.querySelector('#popup-item-id').innerHTML;
+        addComment(username, comment, item_id).then(() => {
+          document.querySelector('#username').value = '';
+          document.querySelector('#comment').value = '';
+        });
+      });
     };
   });
 });
-
-document.addNewComment = addNewComment;
