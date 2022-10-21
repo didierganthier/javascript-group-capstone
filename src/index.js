@@ -2,6 +2,7 @@
 import '../dist/output.css';
 import addComment from './modules/addComment.js';
 import addLike from './modules/addLike.js';
+import countItems from './modules/countItems';
 import getComments from './modules/getComments';
 import init from './modules/init.js';
 // Initialize the app
@@ -16,6 +17,7 @@ document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
       };
     }
   });
+  countItems();
 });
 document.querySelector('body').addEventListener('DOMSubtreeModified', () => {
   document.querySelectorAll('.image').forEach((image) => {
