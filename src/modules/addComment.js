@@ -1,20 +1,20 @@
-import getComments from './getComments.js';
-
-// Add like to game using Involvement API and console.log the response
-const addComment = async (id, username, comment) => {
-  fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AvZcLNYpo6DEiCsZuxdL/comments/', {
+/* eslint-disable camelcase */
+const addComment = async (username, comment, item_id) => {
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AvZcLNYpo6DEiCsZuxdL/comments', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      item_id: id,
       username,
       comment,
+      item_id,
     }),
-  }).then(() => {
-    getComments();
   });
+  if (response.headers.get('Content-Type') === 'application/json') {
+    return response.json();
+  }
+  return response.text();
 };
 
 export default addComment;

@@ -9,8 +9,8 @@
 <body class="bg-[url('https://tinyurl.com/2p876cph')] bg-[#111827]">
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="https://flowbite.com/" class="flex items-center">
-            <img src="assets/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
+        <a href="#" class="flex items-center">
+            <img src="assets/logo.svg" class="mr-3 h-6 sm:h-9" alt="Events Announcer">
         </a>
         <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
@@ -39,23 +39,6 @@
     </nav>
     <div>
         <div id="events" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-            <div id="popup" class=" bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 popup hidden absolute left-0 top-0 z-[1000]">
-                <a href="#">
-                    <img class="rounded-t-lg aspect-auto w-[500px]"  src="" alt="">
-                    <svg id="close" class="w-6 h-6 text-white absolute top-5 right-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-title">Noteworthy technology acquisitions 2021</h5>
-                    </a>
-                    <ul class="comments">
-                    </ul>
-                    <input type="text" class="username w-full px-4 py-2 mb-3 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300" placeholder="Enter your name">
-                    <input type="text" class="usercomment w-full px-4 py-2 mb-3 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300" placeholder="Enter your comment">
-                    <button class="w-full px-4 py-2 text-white bg-blue-700 rounded-lg hover:bg-blue-600 comment_button">Comment</button>
-                </div>
-           
-            </div>
         </div>
     </div>
     <footer class="w-full p-4 border shadow-black shadow-2xl bg-white md:flex md:items-center md:justify-between md:p-6">
@@ -76,5 +59,21 @@
             </li>
         </ul>
     </footer>
+    <div id="popup" class="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 popup hidden fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[1000]">
+        <a href="#">
+            <img class="rounded-t-lg aspect-auto w-[800px] h-full"  src="" alt="">
+            <svg id="close" class="w-6 h-6 text-white absolute top-5 right-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </a>
+        <div class="p-5">
+            <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-title">Noteworthy technology acquisitions 2021</h5>
+            </a>
+            <p id="popup-item-id" class="text-white"></p>
+            <ul id="id" class="comments"></ul>
+            <input type="text" id="username" class="w-full px-4 py-2 mb-3 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300" placeholder="Enter your username">
+            <textarea type="text" id="comment" class="w-full px-4 py-2 mb-3 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300" placeholder="Enter your comment"></textarea>
+            <button type="submit" id="comment" class="w-full px-4 py-2 text-white bg-blue-700 rounded-lg hover:bg-blue-600">Comment</button>
+        </div>
+    </div>
 </body>
 </html>

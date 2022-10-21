@@ -2,6 +2,7 @@
 import '../dist/output.css';
 import addComment from './modules/addComment.js';
 import addLike from './modules/addLike.js';
+import getComments from './modules/getComments';
 import init from './modules/init.js';
 // Initialize the app
 init();
@@ -20,9 +21,13 @@ document.querySelector('body').addEventListener('DOMSubtreeModified', () => {
   document.querySelectorAll('.image').forEach((image) => {
     image.onclick = () => {
       document.querySelector('#popup').classList.remove('hidden');
+      document.querySelector('#popup').classList.add('flex');
+      document.querySelector('#popup').classList.add('justify-center');
       const elementId = image.parentElement.parentElement.children[0].children[0].src.replace('https://avatars.dicebear.com/api/adventurer/', 'like-').replace('.svg', '');
       document.querySelector('#popup-item-id').innerHTML = elementId;
       document.querySelector('#popup-item-id').classList.add('text-white', 'mb-4', 'text-2xl');
+      document.querySelector('ul[class="comments"]').id = `comments-${elementId}`;
+      getComments(elementId);
       // Get the child of the popup div
       const popupChild = document.querySelector('#popup').children[0].children[0];
       popupChild.classList.add('w-full');
@@ -49,6 +54,7 @@ document.querySelector('body').addEventListener('DOMSubtreeModified', () => {
         addComment(username, comment, item_id).then(() => {
           document.querySelector('#username').value = '';
           document.querySelector('#comment').value = '';
+          getComments(item_id);
         });
       });
     };
