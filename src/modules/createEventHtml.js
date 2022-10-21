@@ -5,7 +5,7 @@ const createEventHtml = (event) => {
     title, type, venue, id,
   } = event;
   const eventHtml = `
-  <div id="event" class="w-full max-w-sm bg-white rounded-xl shadow-2xl m-10 bg-opacity-25 backdrop-filter backdrop-blur-lg">
+  <div id="event" class="w-full max-w-sm bg-white rounded-xl shadow-2xl m-10 bg-opacity-25 backdrop-filter backdrop-blur-lg" >
       <div class="flex">
          <img class="h-10 w-10 rounded-full bg-white ml-2 mt-5" src=${`https://avatars.dicebear.com/api/adventurer/${id}.svg`} alt="Profile">
          <div class="mt-2">
@@ -17,7 +17,7 @@ const createEventHtml = (event) => {
   event.performers[0].image
     ? `
       <div class="image-event">
-        <img class="w-full cursor-pointer my-8 image" src="${event.performers[0].image}" alt="${event.performers[0].name}" class="event__image">
+        <img class="w-full cursor-pointer my-8 image" src="${event.performers[0].image}" alt="${event.performers[0].name}" class="event__image" name="${event.id}">
       </div>
       `
     : `
