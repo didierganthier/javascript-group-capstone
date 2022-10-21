@@ -19,6 +19,7 @@ document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
   });
   countItems();
 });
+const getDomCommentsCount = () => document.querySelector('.comments').getElementsByTagName('div').length;
 document.querySelector('body').addEventListener('DOMSubtreeModified', () => {
   document.querySelectorAll('.image').forEach((image) => {
     image.onclick = () => {
@@ -29,7 +30,10 @@ document.querySelector('body').addEventListener('DOMSubtreeModified', () => {
       document.querySelector('#popup-item-id').innerHTML = elementId;
       document.querySelector('#popup-item-id').classList.add('text-white', 'mb-4', 'text-2xl');
       document.querySelector('ul[class="comments"]').id = `comments-${elementId}`;
-      getComments(elementId);
+      getComments(elementId).then(() => {
+        document.querySelector('#popup-comment-count').innerHTML = `${getDomCommentsCount()} comments`;
+      });
+
       // Get the child of the popup div
       const popupChild = document.querySelector('#popup').children[0].children[0];
       popupChild.classList.add('w-full');
