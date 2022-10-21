@@ -31,7 +31,7 @@ document.querySelector('body').addEventListener('DOMSubtreeModified', () => {
       document.querySelector('#popup-item-id').classList.add('text-white', 'mb-4', 'text-2xl');
       document.querySelector('ul[class="comments"]').id = `comments-${elementId}`;
       getComments(elementId).then(() => {
-        console.log(`the event_${image.name} has ${getDomCommentsCount()} comments`);// eslint-disable-line
+        document.querySelector('#popup-comment-count').innerHTML = `${getDomCommentsCount()} comments`;
       });
 
       // Get the child of the popup div
