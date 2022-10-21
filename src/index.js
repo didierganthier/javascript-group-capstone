@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import '../dist/output.css';
+import addComment from './modules/addComment.js';
 import addLike from './modules/addLike.js';
 import init from './modules/init.js';
 // Initialize the app
@@ -15,6 +16,10 @@ document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
     }
   });
 });
+
+const addNewComment = async (id) => {
+  await addComment(id, document.querySelector('.username').value, document.querySelector('.usercomment').value);
+};
 document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
   document.querySelectorAll('.image').forEach((image) => {
     image.onclick = () => {
@@ -27,11 +32,18 @@ document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
       popupChild.classList.add('w-full');
       popupChild.src = image.src;
       document.querySelector('.text-title').innerHTML = image.alt;
+      // listing all the comments based on the customedid
+      document.querySelector('.comment_button').addEventListener('click', () => {
+        addNewComment(image.name);
+      });
       // Make the rest of the page unscrollable
       document.querySelector('body').classList.add('overflow-hidden');
       // Blur the elements of the body
       document.querySelectorAll('#event').forEach((event) => {
         event.classList.add('blur');
+      });
+      document.querySelector('.comment_button').addEventListener('click', () => {
+
       });
       document.querySelector('#close').addEventListener('click', () => {
         document.querySelector('#popup').classList.add('hidden');
@@ -43,3 +55,5 @@ document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
     };
   });
 });
+
+document.addNewComment = addNewComment;
