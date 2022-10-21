@@ -2,7 +2,6 @@
 import '../dist/output.css';
 import addComment from './modules/addComment.js';
 import addLike from './modules/addLike.js';
-import countComments from './modules/countComments.js';
 import getComments from './modules/getComments.js';
 import init from './modules/init.js';
 // Initialize the app
@@ -18,6 +17,7 @@ document.querySelector('#events').addEventListener('DOMSubtreeModified', () => {
     }
   });
 });
+const getDomCommentsCount = () => document.querySelector('.comments').getElementsByTagName('div').length;
 document.querySelector('body').addEventListener('DOMSubtreeModified', () => {
   document.querySelectorAll('.image').forEach((image) => {
     image.onclick = () => {
@@ -28,9 +28,8 @@ document.querySelector('body').addEventListener('DOMSubtreeModified', () => {
       document.querySelector('#popup-item-id').innerHTML = elementId;
       document.querySelector('#popup-item-id').classList.add('text-white', 'mb-4', 'text-2xl');
       document.querySelector('ul[class="comments"]').id = `comments-${elementId}`;
-      getComments(elementId);
-      countComments(image.name).then((response) => {
-        console.log(`the event_${image.name} has ${response} comments`);// eslint-disable-line
+      getComments(elementId).then(() => {
+        console.log(`the event_${image.name} has ${getDomCommentsCount()} comments`);// eslint-disable-line
       });
 
       // Get the child of the popup div
