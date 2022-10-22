@@ -2,7 +2,7 @@ import getLikes from './getLikes.js';
 
 // Add like to game using Involvement API and console.log the response
 const addLike = async (id) => {
-  fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AvZcLNYpo6DEiCsZuxdL/likes/', {
+  fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S8mPEZdLFdk3EfdzA77h/likes/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

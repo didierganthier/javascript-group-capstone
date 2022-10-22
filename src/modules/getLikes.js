@@ -1,5 +1,5 @@
 const getLikes = async () => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/AvZcLNYpo6DEiCsZuxdL/likes/');
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S8mPEZdLFdk3EfdzA77h/likes/');
   if (response.headers.get('content-type').includes('application/json')) {
     const data = await response.json();
     data.forEach((like) => {
