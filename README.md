@@ -2,7 +2,7 @@
 
 ## JavaScript Group Capstone
 
-> JavaScript Group Capstone for Week 5 of Second Module
+> Group Capstone for Week 5 of Second Module, fetching events from Tickets Master API using HTML, Tailwind CSS, JavaScript, Linters and Webpack.
 
 
 ## Built With
@@ -13,7 +13,8 @@
 
 
 ## Live Demo
-N/A
+[![Watch the video](https://drive.google.com/file/d/1-j4iO2kHuLgvIKas5p8x_oKH1lW404qp/view?usp=sharing)](https://drive.google.com/file/d/1-j4iO2kHuLgvIKas5p8x_oKH1lW404qp/view?usp=sharing)
+
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps. (NPM)
