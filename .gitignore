@@ -1,0 +1,26 @@
+# gitignore
+node_modules
+
+# history
+.history
+
+# local env files
+.env*
+
+# Log files
+npm-debug.log*
+
+# Editor directories and files
+.idea
+
+# OS generated files
+.DS_Store
+
+# yarn
+yarn.lock
+
+# next.js
+.next
+
+# build
+build
