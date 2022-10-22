@@ -25,11 +25,17 @@ To get a local copy up and running follow these simple example steps. (NPM)
    git clone https://github.com/didierganthier/leaderboard-project.git
 ```   
 4. Open the project with your IDE. I use [Visual Studio Code](https://code.visualstudio.com/download)
-5. Run `npm install` to get the dependencies
+5. Get your API KEY here: [SeatGeek API](https://seatgeek.com/account/develop)
+6. Create a `.env` file in the root directory of the project and add your API KEY like this:
+```
+   MYCLIENTSECRET = ************************************
+   MYCLIENTID = ****************************************
+```
+7. Run `npm install` to get the dependencies
 
    not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
-6. Compile Tailwind with `npm run tailwind`   
-7. Run webpack:
+8. Compile Tailwind with `npm run tailwind`   
+9. Run webpack:
 - Production:
    ``` 
       npm run build
